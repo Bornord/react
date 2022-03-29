@@ -1,2 +1,11 @@
-# react
-Création d'un site en React
+# Projet react$
+
+# Architecture
+
+# Déploiement
+
+## frontend
+
+## backend
+
+# Préparation
