@@ -1,11 +1,11 @@
 # Projet react$
 
-# Architecture
+## Architecture
 
-# Déploiement
+## Déploiement
 
-## frontend
+### frontend
 
-## backend
+### backend
 
-# Préparation
+## Préparation
