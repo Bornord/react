@@ -1,4 +1,4 @@
-# Projet react$
+# Projet REACT
 
 ## Architecture
 
