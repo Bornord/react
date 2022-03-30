@@ -1,3 +1,5 @@
+@import url("./Banner.css"); /* import grid CSS */
+
 .App {
   text-align: center;
 }

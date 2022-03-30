@@ -5,7 +5,7 @@ function Banner() {
     const title = 'La maison jungle';
     return (
         // Soit on fait appel à la className <=> class = "lmj-banner" en vue.js
-        <div className = 'lmj-banner'>
+        <div >
             <img 
                 src = {logo} 
                 alt = 'La maison jungle' 

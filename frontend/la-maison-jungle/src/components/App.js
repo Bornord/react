@@ -5,11 +5,14 @@ import ShoppingList from './ShoppingList'
 
 
 function App() {
-  return 
+  return (
     <div>
-      <Banner/>
+      <div className = 'lmj-banner'>
+        <Banner/>
+      </div>
       <ShoppingList/>
     </div>
+    )
 }
 
 export default App
