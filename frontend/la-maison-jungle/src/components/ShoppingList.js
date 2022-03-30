@@ -1,12 +1,12 @@
 import Plants from '../datas/Plants'
-import Categories from '../datas/Categories'
+import {Categories,BestSales} from '../datas/Extensions'
 import '../styles/App.css';
- 
+
 
 function ShoppingList() {
     return (
         <div> 
-            <div>
+            <div className = 'wrapper'>
                 {Categories.map((cat) => (
                        <div className='listeDeCategories' key={cat}>
                         <input 
@@ -16,16 +16,17 @@ function ShoppingList() {
                        </div>
                 ))}
             </div>
-            {/* <ul>
-                {Categories.map((cat) => (
-                    <li key = {cat}>
-                       {cat}
-                </li>))}
-            </ul> */}
             <ul>
                 {Plants.map((plant) => (
                     <li key = {plant.id}>
-                        {plant.name} avec la catégorie {plant.category}
+                        <b>
+                            {plant.name}
+
+                        </b> avec la catégorie
+                        <b>
+                            {plant.category}
+                        </b>
+                        {plant.isBestSale && <span> 🤩 </span> }
                     </li>
                 ))}
             </ul>
