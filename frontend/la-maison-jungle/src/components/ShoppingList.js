@@ -1,5 +1,6 @@
 import Plants from '../datas/Plants'
-import {Categories,BestSales} from '../datas/Extensions'
+import {Categories} from '../datas/Extensions'
+import CareScale from './Carescale'
 import '../styles/App.css';
 
 
@@ -16,18 +17,21 @@ function ShoppingList() {
                        </div>
                 ))}
             </div>
-            <ul>
+            <ul className = 'wrapper2'>
                 {Plants.map((plant) => (
-                    <li key = {plant.id}>
-                        <b>
-                            {plant.name}
-
-                        </b> avec la catégorie
-                        <b>
-                            {plant.category}
-                        </b>
-                        {plant.isBestSale && <span> 🤩 </span> }
-                    </li>
+                    <div>
+                        <li key = {plant.id}>
+                            <b>
+                                {plant.name}
+                            </b>
+                            <b>
+                                {plant.category}
+                            </b>
+                            {plant.isBestSale && <span> 🤩 </span> }
+                            <CareScale careType='light' scaleValue={plant.light} />    
+                            <CareScale careType='water' scaleValue={plant.water} />                   
+                        </li>
+                    </div>
                 ))}
             </ul>
         </div>

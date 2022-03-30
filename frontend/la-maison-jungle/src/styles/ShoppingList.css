@@ -8,3 +8,10 @@
     grid-template-columns: 1fr 1fr 1fr 75%;
     grid-template-rows: 1fr;
 }
+
+.wrapper2 {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(9,fr);
+}
