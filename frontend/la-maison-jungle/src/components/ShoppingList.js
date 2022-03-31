@@ -1,7 +1,7 @@
 import Plants from '../datas/Plants'
 import {Categories} from '../datas/Extensions'
-import CareScale from './Carescale'
 import '../styles/App.css';
+import PlantItem from '../datas/PlantItem';
 
 
 function ShoppingList() {
@@ -9,29 +9,24 @@ function ShoppingList() {
         <div> 
             <div className = 'wrapper'>
                 {Categories.map((cat) => (
-                       <div className='listeDeCategories' key={cat}>
+                       <div className='listeDeCategories'>
                         <input 
                             type="button"
-                            value= {`${cat}`}
+                            value= {cat}
                         />
                        </div>
                 ))}
             </div>
             <ul className = 'wrapper2'>
-                {Plants.map((plant) => (
-                    <div>
-                        <li key = {plant.id}>
-                            <b>
-                                {plant.name}
-                            </b>
-                            <b>
-                                {plant.category}
-                            </b>
-                            {plant.isBestSale && <span> 🤩 </span> }
-                            <CareScale careType='light' scaleValue={plant.light} />    
-                            <CareScale careType='water' scaleValue={plant.water} />                   
-                        </li>
-                    </div>
+                {Plants.map(({id,category,cover,name,water,light}) => (
+                    <PlantItem
+                        id = {id}
+                        category = {category}
+                        cover = {cover} 
+                        name = {name} 
+                        water = {water}
+                        light = {light} 
+                    />
                 ))}
             </ul>
         </div>

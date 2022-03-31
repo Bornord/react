@@ -4,7 +4,8 @@ const plants = [
     {
 		name: 'monstera',
 		category: Categories[1],
-		id: '1',
+		cover: '',
+		id: '1a',
 		isBestSale: BestSales[0],
 		light: 1,
 		water:2,
@@ -12,7 +13,8 @@ const plants = [
 	{
 		name: 'ficus lyrata',
 		category: Categories[1],
-		id: '2',
+		cover: '',
+		id: '2b',
 		isBestSale: BestSales[0],
 		light: 1,
 		water:2,
@@ -20,7 +22,8 @@ const plants = [
 	{
 		name: 'pothos argenté',
 		category: Categories[1],
-		id: '3',
+		cover: '',
+		id: '3c',
 		isBestSale: BestSales[0],
 		light: 1,
 		water:2,
@@ -29,7 +32,8 @@ const plants = [
 	{
 		name: 'yucca',
 		category: Categories[1],
-		id: '4',
+		cover: '',
+		id: '4d',
 		isBestSale: BestSales[0],
 		light: 1,
 		water:2,
@@ -38,7 +42,8 @@ const plants = [
 	{
 		name: 'olivier',
 		category: Categories[0],
-		id: '5',
+		cover: '',
+		id: '5e',
 		isBestSale: BestSales[0],
 		light: 1,
 		water:2,
@@ -47,7 +52,8 @@ const plants = [
 	{
 		name: 'géranium',
 		category: Categories[0],
-		id: '6',
+		cover: '',
+		id: '6f',
 		isBestSale: BestSales[1],
 		light: 1,
 		water:2,
@@ -56,7 +62,8 @@ const plants = [
 	{
 		name: 'basilique',
 		category: Categories[0],
-		id: '7',
+		cover: '',
+		id: '7g',
 		isBestSale: BestSales[1],
 		light: 1,
 		water:2,
@@ -65,7 +72,8 @@ const plants = [
 	{
 		name: 'aloe',
 		category: Categories[2],
-		id: '8',
+		cover: '',
+		id: '8h',
 		isBestSale: BestSales[1],
 		light: 1,
 		water:2,
@@ -74,7 +82,8 @@ const plants = [
 	{
 		name: 'succulente',
 		category: Categories[2],
-		id: '9',
+		cover: '',
+		id: '9i',
 		isBestSale: BestSales[1],
 		light: 1,
 		water:2,

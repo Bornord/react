@@ -1,17 +1,10 @@
 import '../styles/Banner.css';
-import logo from '../assets/leaf.png'
 
-function Banner() {
-    const title = 'La maison jungle';
+function Banner({children}) {
     return (
         // Soit on fait appel à la className <=> class = "lmj-banner" en vue.js
-        <div >
-            <img 
-                src = {logo} 
-                alt = 'La maison jungle' 
-                className = 'lmj-logo'
-            />
-            <h1 className = 'lmj-title'>{title}</h1>
+        <div className = 'lmj-banner'>
+            {children}
         </div>
 
         // Soit on définit "à la volée le css associé"
