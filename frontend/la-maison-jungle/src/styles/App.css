@@ -45,3 +45,18 @@
 .padding {
   padding : 40px;
 }
+
+.gauche {
+  align-items: left;
+
+}
+
+.contour {
+  padding: 10px;
+  border: solid;
+  margin: 50px;
+  margin-bottom:  10px;  
+  background-color: #189056;
+  color: black;
+  border-radius:5px;
+}
