@@ -4,7 +4,7 @@ function CareScale({ scaleValue, careType }) {
     const scaleType = careType === 'light' ? '☀️' : '💧'
 
     return (
-        <div onClick={e => alert(scaleValue,careType)}>
+        <div onClick={e => trigger(scaleValue,careType)}>
             {range.map((rangeElem) => 
                 scaleValue >= rangeElem ? 
                     <span 
@@ -28,7 +28,7 @@ function trigger(valeur, type) {
     } else {
         gradation = 'beaucoup';
     }
-    alert ("En terme de " + val + ":\n" + "Cette plante a " + gradation + "de besoin.");
+    alert ("En terme de " + val + ":\n" + "Cette plante a " + gradation + " de besoin.");
 }
 
 
