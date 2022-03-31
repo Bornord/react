@@ -9,6 +9,7 @@ const plants = [
 		isBestSale: BestSales[0],
 		light: 1,
 		water:2,
+		price: 15,
 	},
 	{
 		name: 'ficus lyrata',
@@ -18,6 +19,7 @@ const plants = [
 		isBestSale: BestSales[0],
 		light: 1,
 		water:2,
+		price: 15,
 	},
 	{
 		name: 'pothos argenté',
@@ -27,6 +29,7 @@ const plants = [
 		isBestSale: BestSales[0],
 		light: 1,
 		water:2,
+		price: 16,
 
 	},
 	{
@@ -37,7 +40,7 @@ const plants = [
 		isBestSale: BestSales[0],
 		light: 1,
 		water:2,
-
+		price: 16,
 	},
 	{
 		name: 'olivier',
@@ -47,6 +50,7 @@ const plants = [
 		isBestSale: BestSales[0],
 		light: 1,
 		water:2,
+		price: 16,
 
 	},
 	{
@@ -57,6 +61,7 @@ const plants = [
 		isBestSale: BestSales[1],
 		light: 1,
 		water:2,
+		price: 17,
 
 	},
 	{
@@ -67,6 +72,7 @@ const plants = [
 		isBestSale: BestSales[1],
 		light: 1,
 		water:2,
+		price: 16,
 
 	},
 	{
@@ -77,6 +83,7 @@ const plants = [
 		isBestSale: BestSales[1],
 		light: 1,
 		water:2,
+		price: 16,
 
 	},
 	{
@@ -87,6 +94,7 @@ const plants = [
 		isBestSale: BestSales[1],
 		light: 1,
 		water:2,
+		price: 16,
 
 	}
 ]

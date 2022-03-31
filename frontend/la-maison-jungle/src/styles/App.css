@@ -2,10 +2,13 @@
 @import url("./ShoppingList.css");
 @import url("./index.css");
 @import url("./Footer.css");
+@import url("./Cart.css");
+
 
 
 .App {
   text-align: center;
+  padding: 10px
 }
 
 .App-logo {
@@ -48,8 +51,11 @@
 }
 
 .gauche {
-  align-items: left;
+  text-align: left;
+}
 
+.droite {
+  text-align: right;
 }
 
 .contour {
@@ -60,4 +66,14 @@
   background-color: #189056;
   color: black;
   border-radius:5px;
+}
+
+.marges {
+  margin: 10px
+}
+
+.separation{
+  display: grid;
+  grid-template-columns: 1fr 85%;
+  grid-template-rows: 1fr;
 }

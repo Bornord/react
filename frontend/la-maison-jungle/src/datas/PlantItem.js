@@ -7,10 +7,10 @@ function PlantItem({id, category, cover, name, water, light}) {
             <img src={cover} alt='La maison jungle' height = '200px' width = '200px'/>
             <br></br>
             <b>{name}</b>
-            <div className= 'contour'>
+            {/* <div className= 'contour'>
                 {category}
-            </div>
-            <div className='gauche'>
+            </div> */}
+            <div className='App'>
                 <CareScale careType='light' scaleValue={light} />    
                 <CareScale careType='water' scaleValue={water} />   
             </div>                

@@ -3,19 +3,23 @@ import '../styles/App.css';
 import Banner from './Banner'
 import ShoppingList from './ShoppingList'
 import Footer from './Footer'
+import Cart from './Cart'
 
 import logo from '../assets/leaf.png'
 import { useState } from 'react'
 
-
 function App() {
+  const [cart, updateCart] = useState([]);
   return (
     <div>
       <Banner>
         <img src={logo} alt='La maison jungle' height = '50px' width = '50px'/>
         <h1 className='lmj-title'>La maison jungle</h1>
       </Banner>
-      <ShoppingList/>
+      <div className= 'separation'>
+        <Cart cart={cart} updateCart={updateCart}/>
+        <ShoppingList cart={cart} updateCart={updateCart}/>
+      </div>
       {/* <QuestionForm/> */}
       <Footer/>
     </div>
