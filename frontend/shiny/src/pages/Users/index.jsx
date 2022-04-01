@@ -2,12 +2,11 @@ import React from 'react';
 import * as ReactDOMClient from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import './styles/index.css';
+import '../styles/index.css';
 
-import App from './pages/Users/Home/App';
-import Header from './components/';
+import App from '../Users/Home/App';
+import Header from '../../components/Header';
 import Survey from './pages/Users/Survey/Survey';
-
 import reportWebVitals from './reports/reportWebVitals';
 
 // Ajout de la version react 18 JS
@@ -22,7 +21,7 @@ root.render(
 			</div>
 			<Routes>
 				<Route path="/" element={<App />} />
-				<Route path="/admin" element={<Admin />} />
+				<Route path="/admin" element={<Survey />} />
 			</Routes>
 		</BrowserRouter>
 	</div>
