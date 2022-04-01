@@ -1,14 +1,31 @@
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.svg';
 
 import '../styles/App.css';
 
 function Header() {
 	return (
-		<div>
-			<nav>
-				<Link to="/">Accueil</Link> |{' '}
-				<Link to="/survey">Questionnaire</Link>
-			</nav>
+		<div className="wrapper">
+			<div className="coloration">
+				<nav className="gauche">
+					<Link className="coloration" to="/">
+						Accueil
+					</Link>{' '}
+					|{' '}
+					<Link className="coloration" to="/survey">
+						Questionnaire
+					</Link>
+				</nav>
+			</div>
+			<div>
+				<img
+					src={logo}
+					alt="Logo de l'entreprise Shiny"
+					height="50px"
+					width="50px"
+				/>
+			</div>
+			<div>Shiny</div>
 		</div>
 	);
 }

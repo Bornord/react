@@ -1,6 +1,23 @@
-@import url("./index.css");
+@import url('./index.css');
+@import url('./Header.css');
 
 .App {
 	text-align: center;
-	padding: 20px;
+}
+
+.padding {
+	padding: 10px;
+}
+
+.coloration {
+	color: white;
+	background-color: #7454ec;
+}
+
+.gauche {
+	text-align: start;
+}
+
+.droite {
+	text-align: end;
 }

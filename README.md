@@ -2,7 +2,7 @@
 
 ## Architecture du projet
 
-frontend contient le code associé au frontend géré par React.
+frontend contient le code associé au frontend géré par React.  
 backend contient le code associé au backend géré par Node.js.
 
 ## Déploiement
@@ -21,7 +21,7 @@ Lancer le serveur frontend:
 
 Pour créer le projet, i.e. lors du premier lancement, il faut :
 
--   installer le plugin de déployement Yarn via Homebrew :
+-   installer le plugin de déploiement Yarn via Homebrew :
     > brew install yarn
 -   installer react et créer le projet :
     > npx create-react-app {NomDuSite}
