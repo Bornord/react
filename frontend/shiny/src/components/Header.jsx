@@ -4,7 +4,7 @@ import '../styles/App.css';
 
 function Header() {
 	return (
-		<div className="">
+		<div>
 			<nav>
 				<Link to="/">Accueil</Link> |{' '}
 				<Link to="/survey">Questionnaire</Link>
