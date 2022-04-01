@@ -2,7 +2,7 @@ import '../styles/App.css';
 import { useState, useEffect } from 'react'
 
 function Cart({cart, updateCart}) {
-       const [isOpen, setIsOpen] = useState(false);
+       const [isOpen, setIsOpen] = useState(true);
        const total = cart.reduce((acc,element) => 
               acc + element.amount * element.price,0
        )
@@ -35,9 +35,10 @@ function Cart({cart, updateCart}) {
                      </div>
               </div>
        ): 
-       <div className='lmj-cart'>
+       <div>
               <div className = 'App'>
                      <button 
+                            className='lmj-cart'
                             onClick={() => setIsOpen(true)}>Ouvrir le Panier
                      </button>
               </div>

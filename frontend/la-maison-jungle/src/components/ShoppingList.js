@@ -7,7 +7,7 @@ import { useState} from 'react'
 
 
 function ShoppingList({cart,updateCart}) {
-    let [activeChoice,updateChoice] = useState('Extérieur');
+    let [activeChoice,updateChoice] = useState('');
 
     function load(e) {
         updateChoice(e.target.value);
