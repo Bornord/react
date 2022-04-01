@@ -8,11 +8,11 @@ function Header() {
 		<div className="wrapper">
 			<div className="coloration">
 				<nav className="gauche">
-					<Link className="coloration" to="/">
+					<Link className="coloration" to="/user/">
 						Accueil
 					</Link>{' '}
 					|{' '}
-					<Link className="coloration" to="/survey">
+					<Link className="coloration" to="/user/survey/42">
 						Questionnaire
 					</Link>
 				</nav>

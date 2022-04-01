@@ -1,30 +1,34 @@
 import React from 'react';
-import * as ReactDOMClient from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
-import '../styles/index.css';
+import '../../styles/index.css';
 
-import App from '../Users/Home/App';
+import Home from './Home/Home';
 import Header from '../../components/Header';
-import Survey from './pages/Users/Survey/Survey';
-import reportWebVitals from './reports/reportWebVitals';
+import Error from '../../components/Error';
+import Survey from './Survey/Survey';
 
 // Ajout de la version react 18 JS
 
-const container = document.getElementById('root');
-const root = ReactDOMClient.createRoot(container);
-root.render(
-	<div className="App">
-		<BrowserRouter>
+function App() {
+	console.log(useLocation().pathname);
+	return (
+		<div className="App">
+			<h2> Ceci est l'accès utilisateur</h2>
 			<div className="coloration">
 				<Header />
 			</div>
 			<Routes>
-				<Route path="/" element={<App />} />
-				<Route path="/admin" element={<Survey />} />
+				<Route path="/" element={<Home />}></Route>
+				<Route
+					path="/survey/:questionNumber"
+					element={<Survey />}
+				></Route>
+				<Route path="/*" element={<Error />}></Route>
 			</Routes>
-		</BrowserRouter>
-	</div>
-);
+			{useLocation().pathname === '/' ? <Home></Home> : null}
+		</div>
+	);
+}
 
-reportWebVitals();
+export default App;

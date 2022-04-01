@@ -4,9 +4,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './styles/index.css';
 
-import App from './pages/Users/Home/App';
-import Header from './components/';
-import Survey from './pages/Users/Survey/Survey';
+import Index from './pages/Users/index';
+import Admin from './pages/Admin/Admin';
+import Error from './components/Error';
 
 import reportWebVitals from './reports/reportWebVitals';
 
@@ -17,12 +17,11 @@ const root = ReactDOMClient.createRoot(container);
 root.render(
 	<div className="App">
 		<BrowserRouter>
-			<div className="coloration">
-				<Header />
-			</div>
+			<h2>Test de titre</h2>
 			<Routes>
-				<Route path="/" element={<App />} />
+				<Route path="/user/*" element={<Index />} />
 				<Route path="/admin" element={<Admin />} />
+				<Route path="*" element={<Error />} />
 			</Routes>
 		</BrowserRouter>
 	</div>
