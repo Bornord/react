@@ -2,13 +2,15 @@ import Plants from '../datas/Plants'
 import {Categories} from '../datas/Extensions'
 import '../styles/App.css';
 import PlantItem from '../datas/PlantItem';
+import { useState} from 'react'
+
 
 
 function ShoppingList({cart,updateCart}) {
-    let choix = 'Extérieur';
+    let [activeChoice,updateChoice] = useState('Extérieur');
 
     function load(e) {
-        choix = e.target.value;
+        updateChoice(e.target.value);
     }
 
     function addToCart(name,price) {
@@ -40,6 +42,7 @@ function ShoppingList({cart,updateCart}) {
                 ))} */}
                 <div className = 'App'>
                     <select onChange={e=> load(e)} name="categories" id="cat-select">
+                        <option value=''>---</option>
                         {Categories.map((cat) => (
                             <option value={cat}>{cat}</option>
                         ))}
@@ -47,12 +50,10 @@ function ShoppingList({cart,updateCart}) {
                 </div>
             {/* </div> */}
             <ul className = 'wrapper2'>
-                {Plants.map(({id,category,cover,name,water,light,price}) => {
+                {Plants.map(({id,category,cover,name,water,light,price}) => 
+                    activeChoice === '' || activeChoice === category ?
                     // TENTER AVEC SCHEMA REDUCE
-                    console.log(category === choix);
-                    if (category === choix ) {
-                        console.log('test');
-                        <div key={id}>
+                        (<div key={id}>
                             <PlantItem
                                 id = {id}
                                 category = {category}
@@ -67,10 +68,8 @@ function ShoppingList({cart,updateCart}) {
                                 Ajouter
                             </button>
                         </div>
-                    } else {
-                        <div>Vide</div>
-                    }
-                })}
+                ): null
+                )}
             </ul>
         </div>
     )

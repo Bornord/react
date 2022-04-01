@@ -55,7 +55,7 @@ const plants = [
 	},
 	{
 		name: 'géranium',
-		category: Categories[0],
+		category: Categories[2],
 		cover: 'https://www.ikea.com/fr/fr/images/products/fejka-plante-artificielle-en-pot-interieur-exterieur-monstera__0959226_pe809439_s5.jpg?f=s',
 		id: '6f',
 		isBestSale: BestSales[1],
@@ -66,7 +66,7 @@ const plants = [
 	},
 	{
 		name: 'basilique',
-		category: Categories[0],
+		category: Categories[2],
 		cover: 'https://www.ikea.com/fr/fr/images/products/fejka-plante-artificielle-en-pot-interieur-exterieur-monstera__0959226_pe809439_s5.jpg?f=s',
 		id: '7g',
 		isBestSale: BestSales[1],
@@ -77,7 +77,7 @@ const plants = [
 	},
 	{
 		name: 'aloe',
-		category: Categories[2],
+		category: Categories[0],
 		cover: 'https://www.ikea.com/fr/fr/images/products/fejka-plante-artificielle-en-pot-interieur-exterieur-monstera__0959226_pe809439_s5.jpg?f=s',
 		id: '8h',
 		isBestSale: BestSales[1],
@@ -88,7 +88,7 @@ const plants = [
 	},
 	{
 		name: 'succulente',
-		category: Categories[2],
+		category: Categories[0],
 		cover: 'https://www.ikea.com/fr/fr/images/products/fejka-plante-artificielle-en-pot-interieur-exterieur-monstera__0959226_pe809439_s5.jpg?f=s',
 		id: '9i',
 		isBestSale: BestSales[1],
