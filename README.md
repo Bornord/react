@@ -11,7 +11,7 @@ backend contient le code associé au backend géré par Node.js.
 
 Lancer le serveur frontend:
 
-> cd <NomDuSite>
+> cd {NomDuSite}
 
 > yarn start
 
@@ -24,7 +24,7 @@ Pour créer le projet, i.e. lors du premier lancement, il faut :
 -   installer le plugin de déployement Yarn via Homebrew :
     > brew install yarn
 -   installer react et créer le projet :
-    > npx create-react-app <NomDuSite>
+    > npx create-react-app {NomDuSite}
 -   ajouter un routage SPA :
     > yarn add react-router-dom
 
@@ -54,4 +54,4 @@ Lancer prettier
 L'attribut alt d'un composent CSS, permet d'afficher du texte alternatif pour les malvoyants, par exemple.
 
 -   Pour importer un fichier css dans un autre :
-    > @import url("./<NomDuFichier>.css");
+    > @import url("./{NomDuFichier}.css");
