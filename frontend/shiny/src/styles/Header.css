@@ -1,7 +1,7 @@
-.wrapper {
+.wrapper-header {
 	display: grid;
-	padding: 30px;
-	text-align: center;
-	grid-template-columns: 10fr 4% 4%;
+	padding: 50px;
+	grid-template-columns: 10fr 10% 4%;
 	grid-template-rows: 1fr;
+	align-items: center;
 }

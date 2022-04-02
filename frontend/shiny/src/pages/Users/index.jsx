@@ -6,6 +6,8 @@ import '../../styles/index.css';
 import Home from './Home/Home';
 import Header from '../../components/Header';
 import Error from '../../components/Error';
+import Result from './Result/Result';
+import Freelance from './Freelance/Freelance';
 import Survey from './Survey/Survey';
 
 // Ajout de la version react 18 JS
@@ -24,6 +26,8 @@ function App() {
 					path="/survey/:questionNumber"
 					element={<Survey />}
 				></Route>
+				<Route path="/freelance" element={<Freelance />}></Route>
+				<Route path="/result" element={<Result />}></Route>
 				<Route path="/*" element={<Error />}></Route>
 			</Routes>
 			{useLocation().pathname === '/' ? <Home></Home> : null}

@@ -1,0 +1,8 @@
+.wrapper-survey {
+	display: grid;
+	padding: 30px;
+	text-align: center;
+	grid-template-columns: 200px auto 200px;
+	grid-template-rows: 1fr;
+	align-items: center;
+}

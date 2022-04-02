@@ -27,6 +27,10 @@ Pour créer le projet, i.e. lors du premier lancement, il faut :
     > npx create-react-app {NomDuSite}
 -   ajouter un routage SPA :
     > yarn add react-router-dom
+-   ajouter les propriétés reacts
+    > yarn add prop-types
+-   ajouter le scopage des composants
+    > yarn add styled-components
 
 ## Remarques
 
@@ -54,4 +58,24 @@ Lancer prettier
 L'attribut alt d'un composent CSS, permet d'afficher du texte alternatif pour les malvoyants, par exemple.
 
 -   Pour importer un fichier css dans un autre :
+
     > @import url("./{NomDuFichier}.css");
+
+-   Pour faire des éléments mouvants, il faut utiliser styled components.
+    Concrètement il nous permet de faire passer des variables JS dans du css.
+    Ce qui permet de faire des animations.
+    Point à regarder : - transtion (class css) - hover (au survol)
+    NB : les styled-components ne peuvent pas être appliqué aux images, elles doivent les remplacer !
+
+### Vrac
+
+-   Différence entre ' ' et ` ` :
+    ' ' servent à définir une string.  
+     ` ` servent à défnir une string où on peut intégrer des variables js
+
+Exemple :
+const userInfo = 'User info: ' + name + ' ' + surname + ' ' + telephone;
+
+VS
+
+const userInfo = `User info: ${name} ${surname} ${telephone}`;

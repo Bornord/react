@@ -5,27 +5,32 @@ import '../styles/App.css';
 
 function Header() {
 	return (
-		<div className="wrapper">
+		<div className="wrapper-header">
 			<div className="coloration">
 				<nav className="gauche">
 					<Link className="coloration" to="/user/">
 						Accueil
 					</Link>{' '}
 					|{' '}
-					<Link className="coloration" to="/user/survey/42">
+					<Link className="coloration" to="/user/survey/1">
 						Questionnaire
+					</Link>{' '}
+					|{' '}
+					<Link className="coloration" to="/user/freelance">
+						Espace freelance
 					</Link>
 				</nav>
 			</div>
-			<div>
+			<div className="centre-vertical">
 				<img
+					className="centre-vertical"
 					src={logo}
 					alt="Logo de l'entreprise Shiny"
-					height="50px"
-					width="50px"
+					height="80px"
+					width="80px"
 				/>
 			</div>
-			<div>Shiny</div>
+			<div className="centre-vertical">Shiny</div>
 		</div>
 	);
 }
