@@ -1,17 +1,48 @@
 @import url('./index.css');
 @import url('./Header.css');
+@import url('./Error.css');
 
 .generality {
-	font-family: roboto;
+	font-family: Trebuchet MS;
 	text-align: center;
-	padding: 20px;
 	font-size: 20px;
 }
 
+.color {
+	background-color: #5843e4;
+	padding: 20px;
+	color: white;
+}
+
+.color-snd {
+	color: #8186a0;
+	text-decoration: none;
+}
+
+.hyperlien {
+	text-decoration: none;
+	color: white;
+}
+
+.padding {
+	padding: 20px;
+}
 .gauche {
-	text-align: center;
+	text-align: left;
 }
 
 .droite {
+	text-align: right;
+}
+
+.bord-arrondi {
+	border-radius: 20px;
+}
+
+.button {
+	border-radius: 5px;
 	text-align: center;
+	padding: 5px;
+	margin: 10px;
+	border-color: #fafafa;
 }

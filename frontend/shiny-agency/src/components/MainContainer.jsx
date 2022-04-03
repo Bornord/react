@@ -10,15 +10,20 @@ import Result from '../pages/Result/Result';
 import Error from './Error';
 
 function MainContainer() {
-	console.log(useLocation().pathname);
+	//console.log(useLocation().pathname);
 	return (
-		<Routes>
-			<Route path="/" element={<Home />}></Route>
-			<Route path="/survey/:questionNumber" element={<Survey />}></Route>
-			<Route path="/freelance" element={<Freelances />}></Route>
-			<Route path="/result" element={<Result />}></Route>
-			<Route path="/*" element={<Error />}></Route>
-		</Routes>
+		<div className="padding">
+			<Routes>
+				<Route path="/" element={<Home />}></Route>
+				<Route
+					path="/survey/:questionNumber"
+					element={<Survey />}
+				></Route>
+				<Route path="/freelance" element={<Freelances />}></Route>
+				<Route path="/result" element={<Result />}></Route>
+				<Route path="/*" element={<Error />}></Route>
+			</Routes>
+		</div>
 	);
 }
 
