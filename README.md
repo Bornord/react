@@ -17,9 +17,15 @@ Lancer le serveur frontend:
 
 ### backend
 
+Lancer le serveur backend:
+
+> cd {NomDeLAPI}
+
 ## Préparation
 
 Pour créer le projet, i.e. lors du premier lancement, il faut :
+
+Pour le frontend
 
 -   installer le plugin de déploiement Yarn via Homebrew :
     > brew install yarn
@@ -27,10 +33,17 @@ Pour créer le projet, i.e. lors du premier lancement, il faut :
     > npx create-react-app {NomDuSite}
 -   ajouter un routage SPA :
     > yarn add react-router-dom
--   ajouter les propriétés reacts
+-   ajouter les propriétés reacts :
     > yarn add prop-types
--   ajouter le scopage des composants
+-   ajouter le scopage des composants :
     > yarn add styled-components
+-   ajouter le package axios :
+    > yarn add axios
+
+Pour le backend:
+
+-   Ajouter le plugin express :
+    > npm install express
 
 ## Remarques
 

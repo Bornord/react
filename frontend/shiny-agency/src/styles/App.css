@@ -1,0 +1,17 @@
+@import url('./index.css');
+@import url('./Header.css');
+
+.generality {
+	font-family: roboto;
+	text-align: center;
+	padding: 20px;
+	font-size: 20px;
+}
+
+.gauche {
+	text-align: center;
+}
+
+.droite {
+	text-align: center;
+}
