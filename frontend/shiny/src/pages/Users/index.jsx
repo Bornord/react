@@ -10,6 +10,8 @@ import Result from './Result/Result';
 import Freelance from './Freelance/Freelance';
 import Survey from './Survey/Survey';
 
+import createGlobalStyle from 'styled-components';
+
 // Ajout de la version react 18 JS
 
 function App() {
