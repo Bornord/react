@@ -7,10 +7,10 @@ export const ThemeProvider = ({ children }) => {
 	// const toggleTheme = () => {
 	// 	setTheme(theme === 'light' ? 'dark' : 'light');
 	// };
-	const set = () => {
+	const set = (data) => {
 		console.log('affichage de set');
 		console.log(donnees);
-		setdonnees(donnees);
+		setdonnees(data);
 		console.log('affichage de set: post modif ');
 		console.log(donnees);
 	};
