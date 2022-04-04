@@ -19,10 +19,7 @@ app.use((req, res, next) => {
 app.use('/survey', (req, res, next) => {
 	console.log("all's fine");
 	res.status(201).json({
-		1: 'Quel ?',
-		2: 'Pourquoi ?',
-		3: 'Test?',
-		4: 'Whta?',
+		msg: ['Question 1', 'Question 2', 'Question 3', 'Question 4'],
 	});
 });
 
