@@ -19,7 +19,12 @@ app.use((req, res, next) => {
 app.use('/survey', (req, res, next) => {
 	console.log("all's fine");
 	res.status(201).json({
-		msg: ['Question 1', 'Question 2', 'Question 3', 'Question 4'],
+		msg: [
+			'Cherchez-vous un informaticien ?',
+			'Cherchez-vous un designer ? ?',
+			'Vous exploitez de petits africains ?',
+			'Êtes-vous prêt à raquer ?',
+		],
 	});
 });
 

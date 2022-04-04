@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { ThemeContext } from '../../logic/Context/Context';
 
-import { useAxios } from '../../logic/Request';
+import { useAxios, useRequete } from '../../logic/Request';
 
 import '../../styles/App.css';
 
@@ -14,17 +14,20 @@ function Survey() {
 	const nextQstNum = qstNum + 1;
 	useAxios();
 	const { donnees } = useContext(ThemeContext);
-	console.log('Dans le traitement de survey');
-	console.log(donnees);
 	return (
-		<div>
+		<div className="button">
 			<div className="card">
 				<div className="survey-title">Question {qstNum}</div>
-				<div className="padding"> Quelles sont vos compétences ?</div>
-				<div>test d'affichage du contexte:</div>
-				{donnees.map((element) => (
-					<li>{element}</li>
-				))}
+				<div>{donnees[qstNum - 1]}</div>
+				<div className="resp-wrapper">
+					<div
+						className="resp-button"
+						onClick={(e) => useRequete(e, qstNum)}
+					>
+						Oui
+					</div>
+					<div className="resp-button">Non</div>
+				</div>
 				<div className="survay-wrapper">
 					<div className="prec">
 						{qstNum !== 1 ? (

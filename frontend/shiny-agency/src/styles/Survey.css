@@ -33,3 +33,23 @@
 	border-color: #8186a0;
 	border-radius: 20px;
 }
+
+.resp-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	padding: 20px;
+	grid-gap: 50px;
+	margin: 0 20% 0 20%;
+}
+
+.resp-button {
+	padding: 10px;
+	border: solid;
+	border-radius: 20px;
+}
+
+.resp-button:hover {
+	background-color: #5843e4;
+	color: white;
+}

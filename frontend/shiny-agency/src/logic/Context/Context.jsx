@@ -8,11 +8,7 @@ export const ThemeProvider = ({ children }) => {
 	// 	setTheme(theme === 'light' ? 'dark' : 'light');
 	// };
 	const set = (data) => {
-		console.log('affichage de set');
-		console.log(donnees);
 		setdonnees(data);
-		console.log('affichage de set: post modif ');
-		console.log(donnees);
 	};
 
 	return (
