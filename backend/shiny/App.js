@@ -17,7 +17,8 @@ app.use((req, res, next) => {
 });
 
 app.use('/survey', (req, res, next) => {
-	console.log("all's fine");
+	console.log("all's fine: ");
+	console.log(req.body);
 	res.status(201).json({
 		msg: [
 			'Cherchez-vous un informaticien ?',

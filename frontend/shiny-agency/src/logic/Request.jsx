@@ -3,6 +3,7 @@ import { useContext, useEffect } from 'react';
 import { ThemeContext } from './Context/Context';
 
 import '../styles/App.css';
+
 function useAxios() {
 	const { donnees, set } = useContext(ThemeContext);
 	useEffect(() => {
@@ -15,6 +16,4 @@ function useAxios() {
 	}, []);
 }
 
-function useRequete(e, n) {}
-
-export { useAxios, useRequete };
+export { useAxios };
