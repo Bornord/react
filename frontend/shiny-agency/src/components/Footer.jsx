@@ -1,6 +1,9 @@
-import handle from '../logic/InputTreatement';
+import { useEffect } from 'react';
+import { useAxios } from '../logic/Datas/DataManagement';
+import handle from '../logic/Treatement/MailTreatement';
 
 function Error() {
+	let rep = false;
 	return (
 		<div className="color">
 			<div className="padding">
@@ -12,16 +15,18 @@ function Error() {
 					className="button"
 					id="1"
 					type="text"
-					onKeyUp={(e) => handle(e)}
+					onKeyUp={(e) => {
+						handle(e);
+					}}
 				/>
 				<input
 					id="2"
 					className="button"
 					value="S'inscrire"
 					type="button"
-					onClick={(e) =>
-						handle(e, document.getElementById('1').value)
-					}
+					onClick={(e) => {
+						handle(e, document.getElementById('1').value);
+					}}
 				/>
 			</div>
 		</div>

@@ -4,7 +4,7 @@ import { useContext, useEffect } from 'react';
 import { ThemeContext } from '../../logic/Context/Context';
 import axios from 'axios';
 
-import { useAxios, useRequest } from '../../logic/Request';
+import { useAxios, treat } from '../../logic/Datas/DataManagement';
 
 import '../../styles/App.css';
 
@@ -17,28 +17,31 @@ function handle2(e) {
 
 function Survey() {
 	const qst = useParams().questionNumber;
-	let rep = false;
 	const qstNum = parseInt(qst);
 	const prevQstNum = qstNum - 1;
 	const nextQstNum = qstNum + 1;
 	useAxios();
-	const { donnees } = useContext(ThemeContext);
+	const { donnees, set } = useContext(ThemeContext);
 	return (
 		<div className="button">
 			<div className="card">
 				<div className="survey-title">Question {qstNum}</div>
 				<div>{donnees[qstNum - 1]}</div>
 				<div className="resp-wrapper">
-					<div
+					<input
 						id={1}
-						onClick={(e) => handle2(e)}
+						type="button"
+						value="Oui"
 						className="resp-button"
-					>
-						Oui
-					</div>
+						onClick={(e) => {
+							console.log(e);
+							treat(e);
+							set('set');
+						}}
+					/>
 					<div
 						id={0}
-						onClick={(e) => handle2(e)}
+						onClick={(e) => treat(e)}
 						className="resp-button"
 					>
 						Non
