@@ -15,49 +15,46 @@ export const ThemeProvider = ({ children }) => {
 	// specification
 	// arg 1. : partie du contexte à modifier : msg , errors ou bien data
 	const set = (part, data) => {
-		console.log('contexte');
 		switch (part) {
 			case 'msg':
 				setDonnees({
 					msg: data,
-					errors: '',
+					errors: donnees.errors,
 					donnees: {
-						req: '',
-						resp: '',
+						req: donnees.donnees.req,
+						resp: donnees.donnees.resp,
 					},
 				});
 				break;
 			case 'errors':
 				setDonnees({
-					msg: '',
+					msg: donnees.msg,
 					errors: data,
 					donnees: {
-						req: '',
-						resp: '',
+						req: donnees.donnees.req,
+						resp: donnees.donnees.resp,
 					},
 				});
 				break;
 			case 'req':
-				console.log('avant la modi');
-				console.log(donnees);
-				setDonnees((obj) => {
-					obj.msg = data;
-					obj.donnees.req = data;
-					obj.errors = data;
-					obj.donnees.resp = data;
+				setDonnees({
+					msg: donnees.msg,
+					errors: donnees.errors,
+					donnees: {
+						req: data,
+						resp: '',
+					},
 				});
 				break;
 			case 'resp':
-				console.log('avant la modi');
-				console.log(donnees);
-				setDonnees((obj) => {
-					obj.msg = data;
-					obj.donnees.req = data;
-					obj.errors = data;
-					obj.donnees.resp = data;
+				setDonnees({
+					msg: donnees.msg,
+					errors: donnees.errors,
+					donnees: {
+						req: donnees.donnees.req,
+						resp: data,
+					},
 				});
-				console.log('après la modif');
-				console.log(donnees);
 				break;
 			default:
 				console.log('Problème dans le switch du contexte');

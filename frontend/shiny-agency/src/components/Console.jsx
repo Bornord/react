@@ -12,6 +12,9 @@ function Console() {
 			<div>
 				Le dataStore requête ressemble à:
 				<div className="dataStore-wrapper">{donnees.donnees.req}</div>
+				<br></br>
+				Le dataStore réponse ressemble à:
+				<div className="dataStore-wrapper">{donnees.donnees.resp}</div>
 			</div>
 		</div>
 	);

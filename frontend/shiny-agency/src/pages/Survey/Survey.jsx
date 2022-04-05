@@ -20,26 +20,60 @@ function Survey() {
 			<div className="card">
 				<div className="survey-title">Question {qstNum}</div>
 				<div>{donnees.donnees.req[qstNum - 1]}</div>
-				<div className="resp-wrapper">
-					<input
-						id={1}
-						type="button"
-						value="Oui"
-						className="resp-button"
-						onClick={(e) => {
-							treat(e, set);
-						}}
-					/>
-					<input
-						id={0}
-						type="button"
-						value="Non"
-						className="resp-button"
-						onClick={(e) => {
-							treat(e, set);
-						}}
-					/>
-				</div>
+
+				{qstNum != 10 ? (
+					<div className="resp-wrapper">
+						<Link
+							className="resp-button"
+							to={`/survey/${nextQstNum}`}
+						>
+							<input
+								id={1}
+								type="button"
+								value="Oui"
+								onClick={(e) => {
+									treat(e, set);
+								}}
+							/>
+						</Link>
+						<Link
+							className="resp-button"
+							to={`/survey/${nextQstNum}`}
+						>
+							<input
+								id={0}
+								type="button"
+								value="Non"
+								onClick={(e) => {
+									treat(e, set);
+								}}
+							/>
+						</Link>
+					</div>
+				) : (
+					<div className="resp-wrapper">
+						<Link className="resp-button" to={`/result`}>
+							<input
+								id={1}
+								type="button"
+								value="Oui"
+								onClick={(e) => {
+									treat(e, set);
+								}}
+							/>
+						</Link>
+						<Link className="resp-button" to={`/result`}>
+							<input
+								id={0}
+								type="button"
+								value="Non"
+								onClick={(e) => {
+									treat(e, set);
+								}}
+							/>
+						</Link>{' '}
+					</div>
+				)}
 				<div className="survay-wrapper">
 					<div className="prec">
 						{qstNum !== 1 ? (
