@@ -13,7 +13,8 @@ export const ThemeProvider = ({ children }) => {
 	});
 
 	// specification
-	// arg 1. : partie du contexte à modifier : msg , errors ou bien data
+	// arg 1. : partie du contexte à modifier : msg , errors ou bien data (req ou resp)
+	// arg 2. : valeur du champ à affecter
 	const set = (part, data) => {
 		switch (part) {
 			case 'msg':
