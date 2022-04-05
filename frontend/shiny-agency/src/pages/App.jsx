@@ -6,6 +6,7 @@ import '../styles/index.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import MainContainer from '../components/MainContainer';
+import Console from '../components/Console';
 
 import '../styles/App.css';
 
@@ -16,6 +17,9 @@ function App() {
 				<Header />
 			</div>
 			<MainContainer />
+			<div className="padding">
+				<Console />
+			</div>
 			<Footer></Footer>
 		</div>
 	);

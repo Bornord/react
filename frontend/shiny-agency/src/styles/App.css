@@ -4,6 +4,7 @@
 @import url('./Home.css');
 @import url('./Footer.css');
 @import url('./Survey.css');
+@import url('./Console.css');
 
 .generality {
 	font-family: Trebuchet MS;

@@ -1,19 +1,11 @@
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from '../../logic/Context/Context';
-import axios from 'axios';
 
 import { useAxios, treat } from '../../logic/Datas/DataManagement';
 
 import '../../styles/App.css';
-
-function handle2(e) {
-	axios
-		.post(`http://localhost:8000/survey`, { msg: e.target.id })
-		.then((res) => {})
-		.catch((error) => console.log(error));
-}
 
 function Survey() {
 	const qst = useParams().questionNumber;
@@ -21,12 +13,13 @@ function Survey() {
 	const prevQstNum = qstNum - 1;
 	const nextQstNum = qstNum + 1;
 	useAxios();
+
 	const { donnees, set } = useContext(ThemeContext);
 	return (
 		<div className="button">
 			<div className="card">
 				<div className="survey-title">Question {qstNum}</div>
-				<div>{donnees[qstNum - 1]}</div>
+				<div>{donnees.donnees.req[qstNum - 1]}</div>
 				<div className="resp-wrapper">
 					<input
 						id={1}
@@ -34,18 +27,18 @@ function Survey() {
 						value="Oui"
 						className="resp-button"
 						onClick={(e) => {
-							console.log(e);
-							treat(e);
-							set('set');
+							treat(e, set);
 						}}
 					/>
-					<div
+					<input
 						id={0}
-						onClick={(e) => treat(e)}
+						type="button"
+						value="Non"
 						className="resp-button"
-					>
-						Non
-					</div>
+						onClick={(e) => {
+							treat(e, set);
+						}}
+					/>
 				</div>
 				<div className="survay-wrapper">
 					<div className="prec">

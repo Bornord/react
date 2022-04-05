@@ -1,0 +1,19 @@
+.console-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	align-items: center;
+	grid-gap: 20px;
+}
+
+.dataStore-wrapper {
+	color: #5843e4;
+	border: solid 1px black;
+	padding: 20px;
+}
+
+.error-wrapper {
+	color: red;
+	border: solid 1px black;
+	padding: 20px;
+}
