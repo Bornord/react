@@ -5,7 +5,6 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
 	// TODO : il faut dissocier le localStorage pour le MAJ ailleurs qu'ici (via le DataManager)
-	console.log(reactLocalStorage.get('responses'));
 	const [donnees, setDonnees] = useState({
 		msg: '',
 		errors: '',
@@ -14,7 +13,6 @@ export const ThemeProvider = ({ children }) => {
 			resp: [],
 		},
 	});
-	reactLocalStorage.set('reponses', JSON.stringify(donnees.donnees.resp));
 
 	// specification
 	// arg 1. : partie du contexte à modifier : msg , errors ou bien data (req ou resp)

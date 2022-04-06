@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { ThemeContext } from '../../logic/Context/Context';
+import SurveyChanges from '../../logic/Treatement/SurveyChanges';
 
 import { useAxios, treat } from '../../logic/Datas/DataManagement';
 
@@ -20,60 +21,10 @@ function Survey() {
 			<div className="card">
 				<div className="survey-title">Question {qstNum}</div>
 				<div>{donnees.donnees.req[qstNum - 1]}</div>
+				{console.log('test type')}
+				{console.log(qstNum)}
+				<SurveyChanges qstNum={qstNum}></SurveyChanges>
 
-				{qstNum !== 10 ? (
-					<div className="resp-wrapper">
-						<Link
-							to={`/survey/${nextQstNum}`}
-							onClick={(e) => {
-								treat(e, set);
-							}}
-						>
-							<input
-								id={1}
-								className="resp-button"
-								type="button"
-								value="Oui"
-							/>
-						</Link>
-						<Link to={`/survey/${nextQstNum}`}>
-							<input
-								id={0}
-								className="resp-button"
-								type="button"
-								value="Non"
-								onClick={(e) => {
-									treat(e, set);
-								}}
-							/>
-						</Link>
-					</div>
-				) : (
-					<div className="resp-wrapper">
-						<Link to={`/result`}>
-							<input
-								id={1}
-								className="resp-button"
-								type="button"
-								value="Oui"
-								onClick={(e) => {
-									treat(e, set);
-								}}
-							/>
-						</Link>
-						<Link to={`/result`}>
-							<input
-								id={0}
-								className="resp-button"
-								type="button"
-								value="Non"
-								onClick={(e) => {
-									treat(e, set);
-								}}
-							/>
-						</Link>{' '}
-					</div>
-				)}
 				<div className="survay-wrapper">
 					<div className="prec">
 						{qstNum !== 1 ? (
