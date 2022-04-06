@@ -1,16 +1,20 @@
 import { createContext, useState } from 'react';
+import { reactLocalStorage } from 'reactjs-localstorage';
 
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
+	// TODO : il faut dissocier le localStorage pour le MAJ ailleurs qu'ici (via le DataManager)
+	console.log(reactLocalStorage.get('responses'));
 	const [donnees, setDonnees] = useState({
 		msg: '',
 		errors: '',
 		donnees: {
-			req: '',
-			resp: '',
+			req: [],
+			resp: [],
 		},
 	});
+	reactLocalStorage.set('reponses', JSON.stringify(donnees.donnees.resp));
 
 	// specification
 	// arg 1. : partie du contexte à modifier : msg , errors ou bien data (req ou resp)
@@ -43,25 +47,26 @@ export const ThemeProvider = ({ children }) => {
 					errors: donnees.errors,
 					donnees: {
 						req: data,
-						resp: '',
+						resp: donnees.donnees.resp,
 					},
 				});
 				break;
 			case 'resp':
+				donnees.donnees.resp.push(data);
+				console.log(donnees.donnees.resp);
 				setDonnees({
 					msg: donnees.msg,
 					errors: donnees.errors,
 					donnees: {
 						req: donnees.donnees.req,
-						resp: data,
+						resp: donnees.donnees.resp,
 					},
 				});
 				break;
 			default:
 				console.log('Problème dans le switch du contexte');
 		}
-		// console.log('après la modif');
-		// console.log(donnees);
+		reactLocalStorage.set('reponses', JSON.stringify(donnees.donnees.resp));
 	};
 
 	return (

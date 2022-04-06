@@ -5,24 +5,25 @@ import { ThemeContext } from '../Context/Context';
 import '../../styles/App.css';
 
 function useAxios() {
-	const { donnees, set } = useContext(ThemeContext);
+	const { set } = useContext(ThemeContext);
 	useEffect(() => {
 		axios
 			.get(`http://localhost:8000/survey`)
 			.then((res) => {
 				set('req', res.data.msg);
 			})
-			.catch((error) => console.log(error));
+			.catch((error) => set('errors', error));
 	}, []);
 }
 
 function treat(e, set) {
+	set('resp', e.target.value);
 	axios
 		.post(`http://localhost:8000/survey`, { msg: e.target.value })
 		.then((res) => {
-			set('resp', [e.target.value]);
+			// rien
 		})
-		.catch((error) => console.log(error));
+		.catch((error) => set('errors', error));
 }
 
 export { useAxios, treat };

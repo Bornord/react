@@ -1,5 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { ThemeContext } from '../logic/Context/Context';
+import { reactLocalStorage } from 'reactjs-localstorage';
 
 function Console() {
 	const { donnees, set } = useContext(ThemeContext);
@@ -15,6 +16,15 @@ function Console() {
 				<br></br>
 				Le dataStore réponse ressemble à:
 				<div className="dataStore-wrapper">{donnees.donnees.resp}</div>
+				<br></br>
+				Le dataStore local client ressemble à:
+				<div className="dataStore-wrapper">
+					<li>
+						{JSON.stringify(
+							reactLocalStorage.getObject('reponses')
+						)}
+					</li>
+				</div>
 			</div>
 		</div>
 	);

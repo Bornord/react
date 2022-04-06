@@ -39,6 +39,8 @@ Pour le frontend
     > yarn add styled-components
 -   ajouter le package axios :
     > yarn add axios
+-   ajouter le package de persistance de données :
+    > yarn add reactjs-localstorage
 
 Pour le backend:
 

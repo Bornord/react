@@ -21,27 +21,25 @@ function Survey() {
 				<div className="survey-title">Question {qstNum}</div>
 				<div>{donnees.donnees.req[qstNum - 1]}</div>
 
-				{qstNum != 10 ? (
+				{qstNum !== 10 ? (
 					<div className="resp-wrapper">
 						<Link
-							className="resp-button"
 							to={`/survey/${nextQstNum}`}
+							onClick={(e) => {
+								treat(e, set);
+							}}
 						>
 							<input
 								id={1}
+								className="resp-button"
 								type="button"
 								value="Oui"
-								onClick={(e) => {
-									treat(e, set);
-								}}
 							/>
 						</Link>
-						<Link
-							className="resp-button"
-							to={`/survey/${nextQstNum}`}
-						>
+						<Link to={`/survey/${nextQstNum}`}>
 							<input
 								id={0}
+								className="resp-button"
 								type="button"
 								value="Non"
 								onClick={(e) => {
@@ -52,9 +50,10 @@ function Survey() {
 					</div>
 				) : (
 					<div className="resp-wrapper">
-						<Link className="resp-button" to={`/result`}>
+						<Link to={`/result`}>
 							<input
 								id={1}
+								className="resp-button"
 								type="button"
 								value="Oui"
 								onClick={(e) => {
@@ -62,9 +61,10 @@ function Survey() {
 								}}
 							/>
 						</Link>
-						<Link className="resp-button" to={`/result`}>
+						<Link to={`/result`}>
 							<input
 								id={0}
+								className="resp-button"
 								type="button"
 								value="Non"
 								onClick={(e) => {
