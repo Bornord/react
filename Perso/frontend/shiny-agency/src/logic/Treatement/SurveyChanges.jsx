@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { treat } from '../../logic/Datas/DataManagement';
+import { treat } from '../Datas/DataManagement';
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { ThemeContext } from '../../logic/Context/Context';
+import { ThemeContext } from '../Context/Context';
 
 function SurveyChanges() {
 	const qst = useParams().questionNumber;
