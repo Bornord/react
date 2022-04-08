@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../logic/Context/Context';
 import SurveyChanges from '../../logic/Treatement/SurveyChanges';
 
-import { useAxios, treat } from '../../logic/Datas/DataManagement';
+import { useAxios } from '../../logic/Datas/DataManagement';
 
 import '../../styles/App.css';
 
@@ -14,17 +14,13 @@ function Survey() {
 	const prevQstNum = qstNum - 1;
 	const nextQstNum = qstNum + 1;
 	useAxios();
-
 	const { donnees, set } = useContext(ThemeContext);
 	return (
 		<div className="button">
 			<div className="card">
 				<div className="survey-title">Question {qstNum}</div>
 				<div>{donnees.donnees.req[qstNum - 1]}</div>
-				{console.log('test type')}
-				{console.log(qstNum)}
-				<SurveyChanges qstNum={qstNum}></SurveyChanges>
-
+				<SurveyChanges />
 				<div className="survay-wrapper">
 					<div className="prec">
 						{qstNum !== 1 ? (

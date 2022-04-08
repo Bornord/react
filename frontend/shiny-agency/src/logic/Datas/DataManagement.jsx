@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useContext, useEffect } from 'react';
 import { ThemeContext } from '../Context/Context';
+import { reactLocalStorage } from 'reactjs-localstorage';
 
 import '../../styles/App.css';
 
@@ -16,14 +17,17 @@ function useAxios() {
 	}, []);
 }
 
-function treat(e, set) {
-	set('resp', e.target.value);
+function treat(e, donnees, setFunction, qstNum) {
+	setFunction('resp_questions', e.target.value, qstNum);
+	const tab = donnees.donnees.resp;
+	tab[qstNum] = e.target.value;
+	reactLocalStorage.set('resp_questions', JSON.stringify(tab));
 	axios
 		.post(`http://localhost:8000/survey`, { msg: e.target.value })
 		.then((res) => {
 			// rien
 		})
-		.catch((error) => set('errors', error));
+		.catch((error) => setFunction('errors', error));
 }
 
 export { useAxios, treat };

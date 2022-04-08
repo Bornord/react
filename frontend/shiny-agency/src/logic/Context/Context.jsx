@@ -4,20 +4,29 @@ import { reactLocalStorage } from 'reactjs-localstorage';
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-	// TODO : il faut dissocier le localStorage pour le MAJ ailleurs qu'ici (via le DataManager)
+	let inte = [];
+	console.log(reactLocalStorage.getObject('resp-questions') === null);
+	if (reactLocalStorage.getObject('resp-questions') !== null) {
+		console.log('post cond');
+		inte = JSON.stringify(reactLocalStorage.getObject('resp-questions'));
+		// inte = reactLocalStorage.getObject('resp-questions');
+		console.log(inte);
+	}
 	const [donnees, setDonnees] = useState({
 		msg: '',
 		errors: '',
 		donnees: {
 			req: [],
-			resp: [],
+			resp: inte,
 		},
 	});
+	// TODO : il faut dissocier le localStorage pour le MAJ ailleurs qu'ici (via le DataManager)
 
 	// specification
 	// arg 1. : partie du contexte à modifier : msg , errors ou bien data (req ou resp)
 	// arg 2. : valeur du champ à affecter
-	const set = (part, data) => {
+	const set = (part, data, qstNum) => {
+		qstNum = qstNum || 1;
 		switch (part) {
 			case 'msg':
 				setDonnees({
@@ -49,9 +58,23 @@ export const ThemeProvider = ({ children }) => {
 					},
 				});
 				break;
-			case 'resp':
-				donnees.donnees.resp.push(data);
-				console.log(donnees.donnees.resp);
+			case 'resp_questions':
+				if (donnees.donnees.resp.length === 0) {
+					donnees.donnees.resp = [
+						'',
+						'',
+						'',
+						'',
+						'',
+						'',
+						'',
+						'',
+						'',
+						'',
+						'',
+					];
+				}
+				donnees.donnees.resp[qstNum] = data;
 				setDonnees({
 					msg: donnees.msg,
 					errors: donnees.errors,
@@ -64,7 +87,6 @@ export const ThemeProvider = ({ children }) => {
 			default:
 				console.log('Problème dans le switch du contexte');
 		}
-		reactLocalStorage.set('reponses', JSON.stringify(donnees.donnees.resp));
 	};
 
 	return (

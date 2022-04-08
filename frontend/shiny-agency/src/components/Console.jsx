@@ -21,8 +21,11 @@ function Console() {
 				<div className="dataStore-wrapper">
 					<li>
 						{JSON.stringify(
-							reactLocalStorage.getObject('reponses')
+							reactLocalStorage.getObject('resp_questions')
 						)}
+					</li>
+					<li>
+						{reactLocalStorage.getObject('resp_questions').length}
 					</li>
 				</div>
 			</div>
