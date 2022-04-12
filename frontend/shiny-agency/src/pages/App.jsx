@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import MainContainer from '../components/MainContainer';
 import Console from '../components/Console';
 
-import '../styles/App.css';
+import '../styles/App.scss';
 
 function App() {
 	return (

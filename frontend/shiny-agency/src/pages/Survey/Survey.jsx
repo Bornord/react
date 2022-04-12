@@ -6,7 +6,7 @@ import SurveyChanges from '../../logic/Treatement/SurveyChanges';
 
 import { useAxios } from '../../logic/Datas/DataManagement';
 
-import '../../styles/App.css';
+import '../../styles/App.scss';
 
 function Survey() {
 	const qst = useParams().questionNumber;

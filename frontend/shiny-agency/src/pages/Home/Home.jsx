@@ -1,4 +1,4 @@
-import '../../styles/App.css';
+import '../../styles/App.scss';
 
 import home_image from '../../assets/home-image.jpg';
 

@@ -41,6 +41,8 @@ Pour le frontend
     > yarn add axios
 -   ajouter le package de persistance de données :
     > yarn add reactjs-localstorage
+-   ajouter SASS :
+    > yarn add node-sass
 
 Pour le backend:
 

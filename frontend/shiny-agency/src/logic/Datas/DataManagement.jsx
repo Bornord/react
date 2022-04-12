@@ -3,7 +3,7 @@ import { useContext, useEffect } from 'react';
 import { ThemeContext } from '../Context/Context';
 import { reactLocalStorage } from 'reactjs-localstorage';
 
-import '../../styles/App.css';
+import '../../styles/App.scss';
 
 function useAxios() {
 	const { set } = useContext(ThemeContext);

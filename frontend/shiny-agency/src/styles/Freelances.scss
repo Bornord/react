@@ -1,0 +1,60 @@
+$cd-primary: red;
+$cd-secondary: green;
+$ball-size: 100px;
+
+.btn {
+	background: $cd-primary;
+	font-size: 3rem;
+	cursor: pointer;
+	padding: 1.85rem 3rem;
+	border-radius: 10rem;
+	&:hover + .ball {
+		transform: scale(1.15);
+	}
+	&:active + .ball {
+		transform: scale(1.3);
+	}
+}
+
+// pour les interactions les deux éléments doivent se suivre sur le html.
+// c'est ultra important !!!!
+.ball {
+	width: $ball-size;
+	height: $ball-size;
+	background: $cd-secondary;
+	margin-bottom: 1rem;
+	border-radius: $ball-size * 0.5;
+	transform: scale(1);
+	transition: transform 200ms;
+}
+
+.form {
+	font-size: 3rem;
+	cursor: all-scroll;
+	margin: 5% 30%;
+	padding: 10px;
+	border-radius: 10px;
+	color: #15dea5;
+	background-color: #011c37;
+}
+
+.champ {
+	color: #011c37;
+	border-radius: 30px;
+	border-color: #15dea5;
+	&:focus {
+		text-align: center;
+		border: solid 5px;
+	}
+	&:not(:focus):invalid {
+		background-color: red;
+		color: white;
+	}
+	&:valid {
+		background-color: green;
+	}
+}
+
+.conta {
+	text-align: center;
+}
